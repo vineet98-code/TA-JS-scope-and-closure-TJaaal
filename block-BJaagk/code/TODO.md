@@ -18,6 +18,11 @@ let percentage = function percentage(marks,total){
 let percentage = (marks,total) => {
   return (marks * 100) / total;
 }
+//  Arrow function with return statement
+let percentage = (marks,total) => (marks * 100) / total;
+
+
+
 
 ```
 
@@ -27,11 +32,9 @@ let percentage = (marks,total) => {
 function percentage(marks, total) {
   return (marks * 100) / total;
 }
-// Your answer
+// Your answer - function defination
 
-let percentage = (marks,total) => {
-  return (marks * 100) / total;
-}
+
 
 ```
 
@@ -41,14 +44,7 @@ let percentage = function percentage(marks, total) {
 };
 
 
-// Your answer
-let percentage = function (marks, total) {
-  return (marks * 100) / total;
-};
-
-let percentage = (marks, total) => {
-  return (marks * 100) / total;
-};
+// Your answer - function expression 
 
 
 
@@ -59,10 +55,8 @@ let percentage = function (marks, total) {
   return (marks * 100) / total;
 };
 
-// Your answer
-function percentage(marks, total) {
-  return (marks * 100) / total;
-}
+// Your answer - anonymous function
+
 
 ```
 
@@ -70,29 +64,24 @@ function percentage(marks, total) {
 let percentage = (marks, total) => {
   return (marks * 100) / total;
 };
+// Your ansswer - function expression
 
-// function defination
-function percentage(marks, total) {
-  return (marks * 100) / total;
-}
 ```
 
 ```js
 let percentage = (marks, total) => (marks * 100) / total;
-// Function Defination
-function percentage(marks, total) {
-  return (marks * 100) / total;
-}
+// Your Answer - function expresssion
+
 ```
 
 3. Why is a function definition an expression in JavaScript? Give one example of function expression.
 
-   because function is a object and object is a value, we have to put on the right hand side of equal to, i.e why function expression exist in javascript.
+   Function is a object and object is a value, we have to put on the right hand side of equal to, i.e why function expression exist in javascript.
    ex- let percentage = (marks, total) => (marks * 100) / total;
 
 
 4. Why is a function call an expression in JavaScript?
-   - A function call expression is used to execute a specified function with the provided arguments
+   - A function call always return a value whether it is undefined or a particular value.
 
 5. Write VALID and INVALID next to each example below with the reason.
 
@@ -105,23 +94,29 @@ let five = add(2, 3); // Answer - VALID  - function excution/call while storing 
 
 five = add; // Answer VALID - this is function reference.
 
-five = five(10, 11); // Answer - INVALID - function call with different name.
+five = five(10, 11); // Answer - VALID - 21 
 
 five = function () {
   return 'Hello';
-}; // Answer -  INVALID - no parameter are pasing. 
+}; // Answer -  VALID  
 ```
 
 6. What is the difference between function definition and function call? Explain with an example.
 
 - function defination means when function starting the keyword that is known as function defination. 
 
+  function add(a,b){
+    return a + b;
+  }
+
   function call means to excute the function by calling it with exact name.
 
+  add(23,4);
 
 7. What is the similarities between function definition and function call?
 
-  - A function is procedure to achieve a particular result while function call is using this function to achive that task
+  - function defination is an expression  i.e function is an object
+    function call is a expression i.e function call always return a value ewheteher it is a value or undefined.
 
 8. Is the code below valid or invalid. Explain with reason.
 
