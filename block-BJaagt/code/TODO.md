@@ -6,7 +6,7 @@ Example:
 function hello() {
   var username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // output - useranme is not defined 
 ```
 
 In above code we are looking for the variable named `usename`. There is no variable named `username` in the global scope. The variable is inside the function named `hello` and we can't access the variable defined inside a function from outside.
@@ -28,7 +28,7 @@ console.log(useranme); // output
 if (true) {
   let username = 'Arya';
 }
-console.log(useranme); // output
+console.log(useranme); // output - useranme is not defined
 ```
 
 4. Go through the code below and write down the process of making decision about looking for the variable. Also write the output of the code below.
