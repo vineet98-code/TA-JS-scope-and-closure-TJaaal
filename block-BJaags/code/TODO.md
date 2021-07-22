@@ -65,5 +65,5 @@ let counter = function () {
     return count++;
   }
   return increment();
-};
+}; // throw an error 
 ```
