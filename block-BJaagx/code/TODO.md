@@ -27,9 +27,11 @@ let numbersMultipliedBy5 = multiplyArrayByN(marks, multiplyBy5);
 
 ```js
 function operation(n, opFn) {
-  // your code goes her
+   return opFn(n);
 }
 // TEST
+
+
 console.log(
   operation(21, function (n) {
     return n / 10;
@@ -48,21 +50,25 @@ console.log(
 
 ```js
 function operation(str, opFn) {
-  // your code goes her
+  return opFn(str);
 }
 
 
 // TEST
+
+
 console.log(
   operation("Learning to fly", function (text) {
     return text.toUpperCase();
   })
 );
+
 // Output: "LEARNING TO FLY"
 console.log(
   operation("Higher Order Fucntion", function (text) {
     return text.split(" ");
   })
 );
+
 // Output: ["Higher","Order","Function"]
 ```
