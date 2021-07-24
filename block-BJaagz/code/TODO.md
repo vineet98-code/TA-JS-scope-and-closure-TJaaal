@@ -5,7 +5,9 @@
 - It should work exactly like array `forEach` method
 
 ```js
-function forEach() {}
+function forEach() {
+
+}
 
 forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
   console.log(name + name, i, arr)
@@ -20,7 +22,7 @@ forEach(['Sam', 'Jon', 'Arya'], (name, i, arr) =>
 
 ```js
 function map() {
-  // Your code goes here
+  
 }
 
 map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'AryaArya']
@@ -34,7 +36,7 @@ map(['Sam', 'Jon', 'Arya'], (name) => name + name); // ['SamSam', 'JonJon', 'Ary
 
 ```js
 function filter() {
-  // Your code goes here
+  
 }
 filter(['Sam', 'Jon', 'Arya'], (name) =>
   name.startsWith('S')
