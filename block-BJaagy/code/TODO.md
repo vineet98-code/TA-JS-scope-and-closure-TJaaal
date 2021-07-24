@@ -1,6 +1,28 @@
 1. Create a function by your choice that accepts a callback function.
+   ```js
+   function divideArrayByN(n, cb){
+     return cb(n);
+   }
+
+   console.log(divideArrayByN(21, function (n) {
+     return n / 2;
+   })
+   );
+   ```
 
 2. Create a function by you choice that returns a function reference.
+   ```js
+   function divideArrayByN(n, cb){
+     return cb(n);
+   }
+
+   function divide(n) {
+     return n / 2;
+    }
+    
+   console.log(divideArrayByN(21, divide});
+   ```
+   
 
 3. Create a higher order function called `map` that takes two inputs:
    - An array of numbers/string/boolean etc
@@ -10,6 +32,9 @@ Have `map` return a new array filled with values that are the result of the 'cal
 
 ```js
 // Your code goes here
+function map(arr, cb) {
+  return 
+}
 
 // Test Your Code
 function multiplyByTwo(n) {
@@ -24,6 +49,7 @@ multiplyByTwo(2); //-> 4
 
 ```js
 // Your code goes here
+function 
 
 // Test Your Code
 let alphabet = '';
