@@ -9,8 +9,8 @@ function outer() {
   }
   return inner;
 }
-let getSum = outer();
-let num = getSum();
+let getSum = outer(); // 30
+let num = getSum(); // 
 ```
 
 2.
@@ -51,6 +51,8 @@ tomato();
 
 // What will be the background color after the execution of last line
 ```
+
+
 
 ```js
 function outer() {
