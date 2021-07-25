@@ -51,3 +51,23 @@ tomato();
 
 // What will be the background color after the execution of last line
 ```
+
+```js
+function outer() {
+  let count = 0;
+  function next(){
+    return count++;
+  }
+  return next;
+}
+
+let getNext = outer();
+
+let first = getNext();
+let second = getNext();
+
+let nxt = outer();
+let one = nxt();
+let two = nxt();
+
+```
