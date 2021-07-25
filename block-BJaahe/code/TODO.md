@@ -18,16 +18,12 @@ outer();
 
 ```js
 // Your code goes here
-function delay(cb,[,delay]) {
-  return setTimeout(function() {
-    console.log('After setTimeout');
-  });
-}
-function call() {
-  console.log(alert('hey there'));
+function delay(cb, ms) {
+  return function() {
+  setTimeout((cb,ms) 
 }
 
-delay(call, 5000);
+delay();
 
 
 ```
@@ -57,16 +53,15 @@ lastNameLee('Lynne'); //logs 'Lynne Lee'
 
 ```js
 function storyWriter() {
-  var story ='';
+  let story ='';
   return {
    addWords: function(word){
-     story +='' + word;
+     story +=  word;
+     return story;
    },
    erase: function(){
      story = '';
-   },
-   logStory:function(){
-     console.log(story);
+     return story;
    }
   }
 }
@@ -132,9 +127,20 @@ manager('Head'); // Head Manager
 - `current` will return the current salary returns the updated salary
 
 ```js
-function changeSalary(number) {
+function changeSalary(currentSalary) {
+  // let currentSalary = 0
   return {
-
+    raise: function(){
+     currentSalary = currentSalary + 500;
+     return currentSalary;
+    }, 
+    lower: function(){
+      currentSalary -= 500;
+      return currentSalary;
+    },
+    current: function(){
+      return currentSalary;
+    }
   }
 }
 
@@ -152,7 +158,19 @@ arya.lower(); // 3500
 - `setLastName`: accepts a parameter last name using which updates the firstName and return the updated full name
 
 ```js
-function nameFactory(firstName lastName){
+function nameFactory(firstName, lastName){
+  return {
+    getFullName: function(){
+     return `${firstName} ${lastName}`;
+    }, 
+    setFirstName: function(first){
+      
+      return `${first} ${lastName}`
+    },
+    setLastName: function(last){
+      return `${firstName} ${last}`
+    }
+  }
      
 }
 
@@ -167,9 +185,11 @@ arya.setLastName('Lannister'); // "Jon Lannister"
 The returned function accepts a string (children) and returns the children with the tag you passed.
 
 ```js
-function createTag('b') {
-  function inner(){
-    
+function createTag(tag) {
+  function inner(child){
+    let ele = document.createElement(tag);
+    ele.innerText = child;
+    return ele;
   }
   return inner;
 }
