@@ -88,9 +88,14 @@ storyOfMyLife.erase(); // ''
 When `forEach` function is called it returns another function. When the returned function is called it returns the element from the array at specific index. Every time you call the returned function the value of index should increment.
 
 ```js
-function forEach() {
-  // Your code goes here
+function forEach(arr) {
+  var index = 0;
+  return () => {
+    return index++;
+  }
 }
+
+let next = forEach();
 
 let next = [1, 2, 3, 4, 5];
 next(); // 1
@@ -106,7 +111,10 @@ The returned function accepts a string `prefix` and returns `prefix` and `title`
 
 ```js
 function addDesignation(title) {
-  // your code goes here
+  function inner(prefix){
+    return `${prefix} ${title}`;
+  }
+  return inner;
 }
 
 let sales = addDesignation('Salesman');
@@ -124,8 +132,10 @@ manager('Head'); // Head Manager
 - `current` will return the current salary returns the updated salary
 
 ```js
-function changeSalary() {
-  // Your code goes here
+function changeSalary(number) {
+  return {
+
+  }
 }
 
 let sam = changeSalary(2000);
@@ -142,7 +152,9 @@ arya.lower(); // 3500
 - `setLastName`: accepts a parameter last name using which updates the firstName and return the updated full name
 
 ```js
-// Your code goes here
+function nameFactory(firstName lastName){
+     
+}
 
 let arya = nameFactory('Arya', 'Stark');
 arya.getFullName(); // "Arya Stark"
@@ -155,8 +167,11 @@ arya.setLastName('Lannister'); // "Jon Lannister"
 The returned function accepts a string (children) and returns the children with the tag you passed.
 
 ```js
-function createTag() {
-  // your code goes here
+function createTag('b') {
+  function inner(){
+    
+  }
+  return inner;
 }
 
 let bold = createTag('b');
