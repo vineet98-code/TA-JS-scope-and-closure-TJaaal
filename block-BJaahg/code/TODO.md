@@ -13,7 +13,7 @@ console.log(
   window.firstName,
   window.lastName,
   window.knownAs
-);
+); //undefined, undefined, - no one
 ```
 
 2. Guess the output:
@@ -108,7 +108,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // - 
 ```
 
 10. What will be the output of the following
@@ -121,7 +121,7 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // - 
 ```
 
 11. What will be the output of the following
@@ -146,7 +146,7 @@ function sayHello() {
 }
 sayHello();
 
-console.log(name);
+console.log(name); // - undefined, let can't be accesed out the function.
 ```
 
 13. Guess the output of the code below with a reason.
@@ -155,7 +155,7 @@ console.log(name);
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // Arya Stark, global scope
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +164,7 @@ console.log(name);
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name);
+console.log(name); // undefined,  block scope 
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +173,7 @@ console.log(name);
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i);  // - 20, var can be accesed 
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +182,7 @@ console.log(i);
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i);
+console.log(i); // - 20, block scope
 ```
 
 17. Guess the output and the reason behind that.
