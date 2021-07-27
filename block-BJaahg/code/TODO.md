@@ -27,40 +27,41 @@ function fullName(a, b) {
   return a + b;
 }
 
-console.log(window.fullName(firstName, lastName));
+console.log(window.fullName(firstName, lastName)); // - Arya Stark
 ```
 
 3. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var one = addOne(0);
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); // - 1, 2
 ```
 
 4. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
 var one = addOne(0);
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(one, two);
+console.log(one, two); // - 1, 2
 ```
 
 5. Make a Execution Context Diagram for the following JS and write the output.
 
 ```js
 console.log(addOne(0));
-fucntion addOne(num){
+function addOne(num){
   return num + 1;
 }
 var two = addOne(1);
-console.log(two);
+console.log(two); // -  1
+// 2
 ```
 
 6. Make a Execution Context Diagram for the following JS and write the output.
@@ -71,7 +72,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // - error - addOne is not defined  
 ```
 
 7. Make a Execution Context Diagram for the following JS and write the output.
@@ -82,7 +83,7 @@ const addOne = (num) => {
   return num + 1;
 };
 var two = addOne(1);
-console.log(two);
+console.log(two); // - error - addOne is not defined 
 ```
 
 8. What will be the output of the following
@@ -95,7 +96,8 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome();
+isAwesome(); // -  undefined 
+            
 ```
 
 9. What will be the output of the following
@@ -108,20 +110,20 @@ function isAwesome() {
   }
   console.log(awesome);
 }
-isAwesome(); // - 
+isAwesome(); // -   true
 ```
 
 10. What will be the output of the following
 
 ```js
 function isAwesome() {
-  let awesome;
+  let awesome; // no value is intialize to it, so it is undefined. nothing is assigning because of that the value of undeifned is assigned in the excution phase not in the declaration phase.and that why it is undefined   
   if (false) {
     awesome = true;
   }
   console.log(awesome);
 }
-isAwesome(); // - 
+isAwesome(); // -  undefined 
 ```
 
 11. What will be the output of the following
@@ -135,7 +137,7 @@ function fullName(a, b) {
   return a + b;
 }
 const name = fullName(firstName, lastName);
-console.log(name);
+console.log(name); // -  AryaStark
 ```
 
 12. Guess the output of the code below with a reason.
@@ -155,7 +157,7 @@ console.log(name); // - undefined, let can't be accesed out the function.
 if (true) {
   var name = 'Arya Stark';
 }
-console.log(name); // Arya Stark, global scope
+console.log(name); // Arya Stark, var scope is not limited to the block,
 ```
 
 14. Guess the output of the code below with a reason.
@@ -164,7 +166,7 @@ console.log(name); // Arya Stark, global scope
 if (true) {
   let name = 'Arya Stark';
 }
-console.log(name); // undefined,  block scope 
+console.log(name); // name is undefined,  block scope   let create a scope inside the block 
 ```
 
 15. Guess the output of the code below with a reason.
@@ -173,7 +175,7 @@ console.log(name); // undefined,  block scope
 for (var i = 0; i < 20; i++) {
   //
 }
-console.log(i);  // - 20, var can be accesed 
+console.log(i);  // - 20, var, scope is not limited to the block, which it defined
 ```
 
 16. Guess the output of the code below with a reason.
@@ -182,7 +184,7 @@ console.log(i);  // - 20, var can be accesed
 for (let i = 0; i < 20; i++) {
   //
 }
-console.log(i); // - 20, block scope
+console.log(i); // - i is not defined 
 ```
 
 17. Guess the output and the reason behind that.
@@ -194,7 +196,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample(); // - John Snow
 ```
 
 18. Guess the output and the reason behind that.
@@ -206,7 +208,7 @@ function sample() {
   }
   console.log(username);
 }
-sample();
+sample(); // - username is not undefined  let can be accesed within the scope.
 ```
 
 19. Guess the output and the reason behind that.
@@ -220,8 +222,9 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
-```
+sample(); // - John Snow  because we are creating the value using var, it is block scope, var doesn't create a block scope. 
+          //  - John Snow second
+``` 
 
 20. Guess the output and the reason behind that.
 
@@ -234,7 +237,8 @@ function sample() {
   }
   console.log(username, 'second');
 }
-sample();
+sample(); // - John Snow first
+          // - Arya Stark second
 ```
 
 21. Guess the output and the reason behind that.
@@ -247,7 +251,7 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); // - let keywords can be accesed with the block scope.  `Hello I am First,  Hello I am Second,  Hello I am Third 
 ```
 
 22. Guess the output and the reason behind that.
@@ -260,7 +264,9 @@ function sample(...args) {
   }
 }
 
-sample('First', 'Second', 'Third');
+sample('First', 'Second', 'Third'); // - const keywords can be accesed with the block scope.-  `Hello I am First 
+//  Hello I am Second 
+//  Hello I am Third
 ```
 
 23. Guess the output and the reason behind that.
@@ -272,7 +278,7 @@ if (true) {
   };
   console.log(username, 'First');
   let username = 'Hello World!';
-  myFunc();
+  myFunc(); // - error  - cannot access the username before initialization
 }
 ```
 
@@ -286,10 +292,10 @@ function outer() {
       `I love this movie called ${movie.toUpperCase()}`
     );
   }
-  inner();
+  inner(); 
 }
 
-outer();
+outer(); // - I love this movie called MAD MAX: FURY ROAD - closure 
 ```
 
 25. Guess the output and the reason behind that.
@@ -306,7 +312,7 @@ function outer() {
   inner();
 }
 
-outer();
+outer(); // - I love this movie called BEFORE SUNRISE
 ```
 
 26. Guess the output and the reason behind that.
@@ -322,11 +328,11 @@ function outer() {
         `I love this movie called ${movie.toUpperCase()}`
       );
     }
-    extraInner();
+    extraInner(); // - 
   }
-  inner();
+  inner(); // - 
 }
-outer();
+outer(); // -  I love this movie called GONE GIRL
 ```
 
 30. Using reduce find the final value when the initial value passed is `100`. You have to pass the output of one function into the input of next function in the array `allFunctions` starts with `addOne` ends with `half`.
@@ -353,6 +359,8 @@ let allFunctions = [
   multiplyThree,
   half,
 ];
+
+allFunction.reduce((acc ,cv)  => cv{acc}, 100); // first value is 100, addone is - 101 so that will be the next value of acc that will passed again here in acc and loop will be going on.
 
 // Answer is: 447
 ```
