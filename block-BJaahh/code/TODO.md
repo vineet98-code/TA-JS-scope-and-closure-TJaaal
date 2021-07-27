@@ -4,6 +4,12 @@
 
 ```js
 // Your code goes here
+function multiplyBy(num) {
+  function second(num){
+    return num * num;
+  }
+  return second;
+}
 
 const double = multiplyBy(2);
 const final = double(15); // final should be 30
@@ -13,6 +19,9 @@ const final = double(15); // final should be 30
 
 ```js
 // Your code goes here
+function fullName(firstName){
+   
+}
 
 const name = fullName('Will');
 const final = name('Smith'); // final should be "Will Smith"
