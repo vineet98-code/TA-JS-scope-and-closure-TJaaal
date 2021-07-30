@@ -65,6 +65,29 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+
+// Declaration Phase
+var username = undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextmessage = undefined;
+
+// Execution phase
+
+console.log(username, numbers);
+
+username = 'Arya';
+number = 21;
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
+
+
 ```
 
 3.
@@ -86,6 +109,25 @@ var nextMessage = sayHello('Test');
 
 ```js
 // Your code goes here
+
+// Declaration Phase
+
+let username;
+let number;
+
+let sayHello = function (name) {
+  return `Hello ${name}`;
+};
+
+let message;
+var nextMessage = undefined;
+
+// Execution Phase
+console.log(username, numbers);
+
+
+
+
 ```
 
 4.
