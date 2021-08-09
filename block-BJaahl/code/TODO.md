@@ -3,7 +3,7 @@
 ```js
 function once(cb) {
   return function(){
-    alert(`You can only call me once!`);
+   cb();
   }
 }
 
